@@ -1,0 +1,31 @@
+{
+  "name": "paidgrade",
+  "version": "1.0.0",
+  "description": "Paidgrade is a platform that attempts to fight corruption in Ukraine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ydc223/paidgrade.git"
+  },
+  "keywords": [
+    "corruption",
+    "education"
+  ],
+  "author": "Yana Chala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ydc223/paidgrade/issues"
+  },
+  "homepage": "https://github.com/ydc223/paidgrade#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "i18n": "^0.8.3",
+    "mongoose": "^4.6.8",
+    "path": "^0.12.7"
+  }
+}

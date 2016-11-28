@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example that shows off a responsive product landing page.">
+
+    <title>Paid Grade</title>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
+
+
+<!--[if lte IE 8]>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+
+<![endif]-->
+<!--[if gt IE 8]><!-->
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+
+<!--<![endif]-->
+
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/marketing.css">
+    <!--<![endif]-->
+
+    <!--Jquery-->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+  <div class="header">
+      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+
+          <ul class="pure-menu-list">
+              <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">PAID GRADE</a></li>
+              <li class="pure-menu-item"><a href="#information" class="pure-menu-link">ПРО НАС</a></li>
+              <li class="pure-menu-item"><a href="#contacts" class="pure-menu-link">КОНТАКТИ</a></li>
+          </ul>
+      </div>
+  </div>
+
+
+
+
+<div class="splash-container">
+    <div class="splash">
+      <p>
+        <a href="#information" class="pure-button pure-button-active" id="btn">Поділитися досвідом</a>
+      </p>
+    </div>
+</div>
+
+<div id="information" class="content-wrapper">
+
+    <div class="content">
+        <center><h2 class="content-head is-center">Поділись особистим досвідом хабарства в сфері освіти </h2></center>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <div class="pure-form  pure-form-stacked">
+
+                        <label for="name">Ім'я (необов'язково)</label>
+                        <input id="name" type="text" placeholder="Ім'я">
+
+
+                        <label for="email">Email (необов'язково)</label>
+                        <input id="email" type="email" placeholder="Email" required>
+
+                        <label for="city">Місто навчання</label>
+                        <select id="city" placeholder="Інше" onchange="cityHandler()">
+                          <option value="kiev">Київ</option>
+                          <option value="lviv">Львів</option>
+                          <option value="kharkiv">Харків</option>
+                          <option value="odesa">Одеса</option>
+                          <option value="other">Інше</option>
+                        </select>
+
+
+                        <div id="invalid_city"></div>
+
+                        <div id="customCity"></div>
+
+
+                        <label for="university">Університет</label>
+                        <select id="university" placeholder="Інший" onchange="universtityHandler()">
+                          <option value='knu'>Київський національний університет імені Тараса Шевченка (КНУ)</option>
+                          <option value='knau'>Національний авіаційний університет (НАУ)</option>
+                          <option value='kteu'>Київський національний торговельно-економічний університет</option>
+                          <option value='kpi'>Національний технічний університет України “Київський політехнічний інститут”</option>
+                          <option value='kneu'>Київський національний економічний університет ім. Вадима Гетьмана</option>
+                          <option value='kutd'>Київський національний університет технологій і дизайну</option>
+                          <option value='knuba'>Київський національний університет будівництва і архітектури</option>
+                          <option value='knlu'>Київський національний лінгвістичний університет</option>
+                          <option value='other'> Інший </option>
+
+                        </select>
+
+                        <div id="invalid_university"></div>
+
+
+                        <div id="customUniversity"></div>
+
+                        <div id="invalid_major"></div>
+
+                        <label for="major">Ваша спеціальність</label>
+                        <input id="major" type="text" placeholder="Ваша спеціальність">
+
+
+                          <label for="bribe-yes" > Ви колись платили хабар?
+                             <input id="bribe-yes" type="checkbox" >
+                             <center>Так</center>
+
+
+                        <label for="subject">За який предмет ви платили хабар?</label>
+                        <select id="subject" placeholder="Предмет" >
+                          <option value="0">Готельно-ресторанна справа, туризм</option>
+                    			<option value="1">Ветеринарна медицина</option>
+                    			<option value="2">Педагогіка</option>
+                    			<option value="3">Менеджмент, маркетинг</option>
+                    			<option value="4">Авіаційна та ракетно-космічна техніка</option>
+                    			<option value="5">Автоматизація, приладобудування</option>
+                    			<option value="6">Біологія, екологія</option>
+                    			<option value="7">Військові науки, національна безпека</option>
+                    			<option value="8">Географія, геологія</option>
+                    			<option value="9">Журналістика, видавництво та поліграфія</option>
+                    			<option value="10">Інформаційні технології, кібербезпека</option>
+                    			<option value="11">Історія, археологія</option>
+                    			<option value="12">Культура, мистецтво</option>
+                          <option value="13">Koп'ютерны науки</option>
+                    			<option value="14">Легка промисловість</option>
+                    			<option value="15">Математика, статистика</option>
+                    			<option value="16">Інженерія, машинобудування</option>
+                    			<option value="17">Медицина, фармація</option>
+                    			<option value="18">Металургія</option>
+                    			<option value="19">Цивільна безпека</option>
+                    			<option value="20">Харчові технології</option>
+                    			<option value="21">Політологія, міжнародні відносини</option>
+                    			<option value="22">Психологія</option>
+                    			<option value="23">Електроніка, телекомунікації</option>
+                    			<option value="24">Аграрні науки та продовольство</option>
+                    			<option value="25">Соціологія, соціальна робота</option>
+                    			<option value="26">Будівництво, архітектура</option>
+                    			<option value="27">Транспорт</option>
+                    			<option value="28">Фізика, астрономія</option>
+                    			<option value="29">Фізична культура</option>
+                    			<option value="30">Філологія</option>
+                    			<option value="31">Філософія, релігія та культурологія</option>
+                    			<option value="32">Хімія, біоінженерія</option>
+                    			<option value="33">Економіка</option>
+                    			<option value="34">Енергетика</option>
+                    			<option value="35">Право</option>
+                    			<option value="36">Інше</option>
+                        </select>
+
+                        <label for="official">Посадова особа</label>
+                        <select id="official" placeholder="Посадова особа" >
+                          <option value="0">Викладач</option>
+                    			<option value="1">Аспірант</option>
+                    			<option value="2">Декан</option>
+                    			<option value="3">Інша</option>
+                        </select>
+
+                        <label for="officialName">Ім'я посадової особи (необов'язково)</label>
+                        <input id="officialName" type="text" placeholder="Ім'я посадової особи">
+
+                        <div id="invalid_amount"></div>
+
+                        <label for="amount">Сума в гривні</label>
+                        <input id="amount" type="number" min="1" max="25000" placeholder="Сума">
+
+                        <label for="grade">Оцінка</label>
+                        <select id="grade" placeholder="Оцінка" >
+                          <option value="A">A (90%-100%)</option>
+                          <option value="B">B (75%-90%)</option>
+                          <option value="C">C (60%-75%)</option>
+                        </select>
+
+
+                          <label for="forced-yes" > Вас попросили заплатити?
+                             <input id="forced-yes" type="checkbox">
+                             <center>Так</center>
+                           </label>
+
+
+                        <label for="size">Розмір вашого потоку?</label>
+                        <select id="size" placeholder="Розмір" >
+                          <option value="0">Меньше 20</option>
+                    			<option value="1">20-50</option>
+                    			<option value="2">50-100</option>
+                    			<option value="3">100-200</option>
+                          <option value="4">Більше 200</option>
+                        </select>
+
+                        <div id=confirmation></div>
+
+                        <center><button id="btn" type="submit" class="pure-button" onclick="validateInput()">Поділитися</button></center>
+
+
+                </div>
+            </div>
+
+            <div id="contacts" class="l-box-lrg pure-u-1 pure-u-md-3-5">
+              <h4>Більше інформації</h4>
+                <p>
+
+                </p>
+
+                <h4 >Контакти</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer l-box is-center">
+    </div>
+
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+
+
+</body>
+</html>

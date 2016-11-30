@@ -8,6 +8,9 @@
     <title>Paid Grade</title>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
+<link rel='stylesheet prefetch' href='http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
+
 
 
 <!--[if lte IE 8]>
@@ -70,7 +73,11 @@
 <div id="information" class="content-wrapper">
 
     <div class="content">
-        <center><h2 class="content-head is-center">Поділись особистим досвідом хабарства в сфері освіти </h2></center>
+        <center><h2 class="content-head is-center">Поділись особистим досвідом хабарництва в сфері освіти </h2></center>
+        <center><p class="content-head is-center"> Майте на увазі, що правдивість вашої інформації грає дуже важливу
+          роль. Ви можете залишитися анонімним, якщо забажаете. Надана вами інформація буде використана
+        виключно в наукових цілях. </p></center>
+
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
@@ -119,16 +126,32 @@
 
                         <div id="invalid_major"></div>
 
-                        <label for="major">Ваша спеціальність</label>
+                        <label for="major">Ваша спеціальність (повна назва)</label>
                         <input id="major" type="text" placeholder="Ваша спеціальність">
 
+                        <div id="invalid_department"></div>
 
-                          <label for="bribe-yes" > Ви колись платили хабар?
-                             <input id="bribe-yes" type="checkbox" >
-                             <center>Так</center>
+                        <label for="department">Ваш факультет (повна назва)</label>
+                        <input id="department" type="text" placeholder="Ваш факультет">
 
 
-                        <label for="subject">За який предмет ви платили хабар?</label>
+                        <label for="bribe-yes" > Ви колись платили хабар (клацніть поле якщо <i>так</i>, залишіть пустим якщо <i>ні</i>)?
+                           <input id="bribe-yes" type="checkbox" >
+                           <center>Так</center>
+                        </label>
+
+                        <label for="forced-yes" > Вас просили заплатити?
+                           <input id="forced-yes" type="checkbox">
+                           <center>Так</center>
+                         </label>
+
+                       <label for="bribe-other" > Чи відомі вам інші випадки хабарництва в вашому вузі?
+                          <input id="bribe-other" type="checkbox">
+                          <center>Так</center>
+                        </label>
+
+
+                        <label for="subject">Оберіть сферу навчання предмету за який ви заплатили хабар?</label>
                         <select id="subject" placeholder="Предмет" >
                           <option value="0">Готельно-ресторанна справа, туризм</option>
                     			<option value="1">Ветеринарна медицина</option>
@@ -143,7 +166,7 @@
                     			<option value="10">Інформаційні технології, кібербезпека</option>
                     			<option value="11">Історія, археологія</option>
                     			<option value="12">Культура, мистецтво</option>
-                          <option value="13">Koп'ютерны науки</option>
+                          <option value="13">Koп'ютерні науки</option>
                     			<option value="14">Легка промисловість</option>
                     			<option value="15">Математика, статистика</option>
                     			<option value="16">Інженерія, машинобудування</option>
@@ -187,16 +210,18 @@
 
                         <label for="grade">Оцінка</label>
                         <select id="grade" placeholder="Оцінка" >
-                          <option value="A">A (90%-100%)</option>
-                          <option value="B">B (75%-90%)</option>
-                          <option value="C">C (60%-75%)</option>
+                          <option value="A">A </option>
+                          <option value="A-">A- </option>
+                          <option value="B+">B+ </option>
+                          <option value="B">B </option>
+                          <option value="B-">B- </option>
+                          <option value="C+">C+ </option>
+                          <option value="C">C </option>
+                          <option value="C-">C- </option>
                         </select>
 
 
-                          <label for="forced-yes" > Вас попросили заплатити?
-                             <input id="forced-yes" type="checkbox">
-                             <center>Так</center>
-                           </label>
+
 
 
                         <label for="size">Розмір вашого потоку?</label>
@@ -216,17 +241,76 @@
                 </div>
             </div>
 
-            <div id="contacts" class="l-box-lrg pure-u-1 pure-u-md-3-5">
+            <div  class="l-box-lrg pure-u-1 pure-u-md-3-5">
+
+
               <h4>Більше інформації</h4>
                 <p>
-
+                  Корупція є неприйнятним явищем в престижних універстетах світу, оскільки вища освіта грає
+                  найважливішу роль у формуванні поглядів, знання та досвіду.
+                  Українці - дуже розумна нація, яка здатна на інновації та наукові вікриття,
+                  але, нажаль, корупція в сфері освіти дуже лімітує український потенціал та стає на заваді до якісної освіти.
+                  Корупцію можна здолати суспільними зусиллями, але для цього потрібно щоб громадяни індивідуально хотіли цього.
                 </p>
 
-                <h4 >Контакти</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
+                  Тому я вирішила створити проект, Paid Grade який не тільки демонструє рівень корупції в сфері освіти
+                  а й пропонує рішення цієї проблеми. Метою проекту є продемонструвати, що корупція в сфері освіти не є
+                  нормою в розвинутих країнах і заохотити студентів та викладачів активно повідомляти про випадки корупції.
                 </p>
+
+                <h4>Стадії розробки</h4>
+                  <p>
+                    Перша стадія: зібрати інформацію про випадки хабарництва в університетах.
+                  </p>
+                  <p>
+
+                    Друга стадія: проаналізувати інформацію та зробити її публічно доступною
+                    (таку як, вартість середньостатистичного хабара залежно від міста та університету).
+                  </p>
+                  <p>
+                    Третя стадія: розробити офіційну онлайн систему для повідомлення випадків
+                    корупції в державних установах України.
+                  </p>
+
+
+                  <h4 >Корисні посилання українською</h4>
+                      <ul class="list-unstyled links">
+                      <li><a href="http://www.acrc.org.ua/ua/contacts/kudy-poskarzhytys-na-korupcziyu.html">&emsp; Куди поскаржитись про корупцію</a></li>
+                      <li><a href="http://www.acrc.org.ua/ua/legislation/laws-of-ukraine/">&emsp; Антикорупційний портал</a></li>
+                      <li><a href="http://www.acrc.org.ua/ua/legislation/laws-of-ukraine/">&emsp; Закони України щодо корупції</a></li>
+                      <li><a href="http://kiis.com.ua/materials/pr/20161602_corruption/Corruption%20in%20Ukraine%202015%20UKR.pdf">&emsp; Стан корупції в Украіні</a></li>
+                      <li><a href="http://ti-ukraine.org/system/files/docs/news/how-much-does-corruption-cost-ukraine_presentation_ces.pdf">
+                        &emsp; Якби не було корупції</a></li>
+                      <li><a href="http://ti-ukraine.org/%D1%82%D0%B5%D0%B3%D0%B8/%D0%BA%D0%BE%D1%80%D1%83%D0%BF%D1%86%D1%96%D1%8F">&emsp; Transparancy International</a></li>
+                      <li><a href="http://voxukraine.org/2016/02/04/addressing-corruption-in-ukraine-ua/">&emsp; Боротьба з корупцією</a></li>
+                    </ul>
+
+                    <h4 id="contacts">Корисні посилання англійською</h4>
+                      <ul class="list-unstyled links">
+                        <li><a href="http://www.ua.undp.org/content/ukraine/en/home/presscenter/articles/2016/03/15/new-project-to-help-ukraine-prevent-corruption.html
+                            ">&emsp; Project to prevent corruption</a></li>
+                        <li><a href="http://www.coe.int/t/DGHL/cooperation/economiccrime/corruption/Projects/upac/upac_en.asp">
+                          &emsp; Corruption UPAC Project Ukraine</a></li>
+                        <li><a href="http://www.oecd.org/corruption/acn/ukraine-oecd-anti-corruption-project.htm
+                          ">&emsp; Anti corruption network </a></li>
+                        <li><a href="http://www.transparency.org/content/download/32778/502137">&emsp; Corruption Perception Index</a></li>
+                        <li><a href="https://www.google.ae/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwjGw_fejszQAhVGaxQKHSVEBX4QFggnMAE&url=https%3A%2F%2Fejournals.bc.edu%2Fojs%2Findex.php%2Fihe%2Farticle%2Fdownload%2F7981%2F7132&usg=AFQjCNHS3GnUxi9-qupPNWYRnv3XA95Dww&sig2=Q0sP_MGmrGssvX3euYwXEw&bvm=bv.139782543,d.bGg
+                          ">&emsp; Higher Education Corruption in Ukraine</a></li>
+                      </ul>
+
+                <h4>Контакти</h4>
+                <p>Засновник проекту - Яна Чала - студентка в Нью Йоркському Університеті в Абу Дабі, що вивчає комп'ютерні науки.
+                Будь ласка відправляйте коментарі та пропозиції на мою електронну пошту ydc223@nyu.edu або зв'яжіться зі мною на соціальних мережах.
+              </p>
+
+                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline">
+                  <li><a href="https://www.linkedin.com/in/yana-chala-296086114?trk=hp-identity-name"><i class="fa fa-linkedin"></i></a> </li>
+                  <li> <a href="https://github.com/ydc223"><i class="fa fa-github"></i></a> </li>
+                  <li> <a href="https://vk.com/try_to_find_yourself"><i class="fa fa-vk"></i></a></li>
+                  <li> <a href="https://www.facebook.com/jana.chalaya"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+
             </div>
         </div>
 

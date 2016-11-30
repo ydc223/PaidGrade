@@ -12,11 +12,13 @@ var userSchema = new Schema({
   customUniversity:{ type: String },
   major: { type: String },
   bribeyes: { type: String },
-  subject: { type: Number },
+  forcedyes: { type: String },
+  bribeother: { type: String },
+  subject: { type: String },
+  department: { type: String },
   official: { type: String },
   officialName: { type: String },
   amount: { type: String },
-  forcedyes: { type: String },
   size: { type: Number },
   date: {type: String }
 });

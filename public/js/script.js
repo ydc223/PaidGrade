@@ -11,8 +11,8 @@ $(function() {
 
 function validateInput(){
   console.log("Validating...");
-
-  if ($('#amount').val()==""){
+  var _bribeyes = $('#bribe-yes:checked').length > 0;
+  if (($('#amount').val()=="")&(_bribeyes)){
     console.log("Amount");
     $('#invalid').remove();
     $('#invalid_input').remove();
@@ -46,6 +46,14 @@ function validateInput(){
 
     $("#invalid_major").append("<p id='invalid'>Введіть вашу спеціальність будь ласка</p>");
     $("#confirmation").append("<p id='invalid_input'>Введіть вашу спеціальність будь ласка</p>");
+  }
+  else if ($('#department').val()==""){
+    console.log("department");
+    $('#invalid').remove();
+    $('#invalid_input').remove();
+
+    $("#invalid_department").append("<p id='invalid'>Введіть ваш факультет будь ласка</p>");
+    $("#confirmation").append("<p id='invalid_input'>Введіть вашу факультет будь ласка</p>");
 
   }
   else{
@@ -168,8 +176,12 @@ function submit(){
   var _university = $("#university").val();
   var _major = $("#major").val();
   var _bribeyes = $('#bribe-yes:checked').length > 0;
+  var _forcedyes = $('#forced-yes:checked').length > 0;
+  var _bribeother = $('#bribe-other:checked').length > 0;
   console.log(_bribeyes);
-  var _subject = $("#subjeсt").val();
+  var _subject = $("#subject").val();
+  var _department = $("#department").val();
+  console.log(_subject);
   var _official = $("#official").val();
   var _officialName = $("#officialName").val();
   var _amount = $("#amount").val();
@@ -188,32 +200,37 @@ function submit(){
       university: _university,
       customUniversity:_customUniversity,
       major: _major,
+      department: _department,
       bribeyes: _bribeyes,
+      forcedyes: _forcedyes,
+      bribeother: _bribeother,
       subject: _subject,
       official: _official,
       officialName: _officialName,
       amount: _amount,
       grade: _grade,
-      forcedyes: _forcedyes,
       size: _size,
       date: _date
     },
     type: "GET",
     datatype: "json"
   }).done(function(json){
-    $("#name").val("Ім'я");
+    $("#name").val("");
     $("#email").val("");
-    $("#city").val("Інше");
-    $("#university").val("Інший");
-    $("#major").val("Ваша спеціальність");
-    $("#professor").val("Ім'я професора");
-    $("#amount").val("Сума");
+    $("#city").val("");
+    $("#university").val("");
+    $("#major").val("");
+    $("#professor").val("");
+    $("#amount").val("");
+    $("#department").val("");
+    $("#input_сustom_city").val("");
+    $("#input_сustom_university").val("");
 
     var resp = 'Дякую';
-    $("#confirmation").append("<p id='invalid_input'>Дякуємо</p>");
+    $("#confirmation").append("<center><p>Дякую за вашу допомогу</p></center>");
 
   }).fail(function(xhr, status, error){
-    $("#confirmation").html("=(");
+    $("#confirmation").append("<p id='submit_failed'> Щось пішло не так, спробуйте ще раз.</p>");
     console.log( "Error: " + errorThrown );
     console.log( "Status: " + status );
     console.dir( xhr );
